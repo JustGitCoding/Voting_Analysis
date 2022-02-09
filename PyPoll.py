@@ -41,7 +41,7 @@ with open(file_to_load) as election_data:
     headers = next(file_reader)
     print(headers)
 
-
+print("hello")
 
 #total number of votes cast
 
