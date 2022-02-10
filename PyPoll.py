@@ -15,7 +15,7 @@ import os
 #assign a variable to LOAD a file FROM a path
 file_to_load = os.path.join("Resources","election_results.csv")
 #assign a variable to SAVE the file TO a path
-file_to_save = os.path.join("analysis","voting_analysis.txt")
+file_to_save = os.path.join("Analysis","voting_analysis.txt")
 
 
 # election_data = open(file_to_load,'r')
@@ -87,7 +87,10 @@ with open(file_to_save,"w") as txt_file:
     for candidate_name in candidate_votes:
         votes = candidate_votes[candidate_name]
         vote_percentage = float(votes / total_votes) * 100
-        # print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        candidate_result = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        print(candidate_result)
+        txt_file.write(candidate_result)
+
 
         #determine winner based on popular vote
         if votes > winning_count and vote_percentage > winning_percentage:
@@ -102,5 +105,6 @@ with open(file_to_save,"w") as txt_file:
         f"Winning Vote Count: {winning_count:,}\n"
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"------------------------------\n")
-    # print(winner_summary)
+    print(winner_summary)
+    txt_file.write(winner_summary)
 
