@@ -16,7 +16,7 @@ Steps performed include:
 
 ## Results Summary
 The analysis of the election showed showed that:
-- There were "369,711" votes cast in the election.
+- There were 369,711 votes cast in the election.
 - There votes were distributed into the following geographical regions:
     - Jefferson County: 10.5% (38,855)
     - Denver County: 82.8% (306,055)
