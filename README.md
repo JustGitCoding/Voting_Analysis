@@ -31,11 +31,11 @@ The analysis of the election showed showed that:
 
 ## Business proposal
 The analysis above was generated through a python script which can be re-purposed for any future election audits with only a few minor modifications:
-1. You'll need to update the script to let Python know where your raw data (.csv file) is saved on your hard drive.
+1. You'll need to update the script to let Python know where your raw data (.csv file) is saved on your hard drive. For example, in the snippet below, the blue text would need to be updated.
 ```python
     file_to_load = 'resources/election_results.csv'
 ```
-2. Depending on how the data is formatted in the new .csv file, you may need to update the following section of code, so that you are pulling from the appropriate "columns" in the data.
+2. Depending on how the data is formatted in the new .csv file, you may need to update the following section of code, so that you are pulling from the appropriate "columns" in the data. This is done by updating the index number between each square bracket.
 ```python
     candidate_name = row[2]
     county_name = row[1]
